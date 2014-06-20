@@ -2,7 +2,7 @@ import org.mockito.stubbing.OngoingStubbing
 
 import scala.reflect.ClassTag
 
-package object moskito {
+package object mosckito {
   implicit def untag[T](tag: ClassTag[T]): Class[T] = tag.runtimeClass.asInstanceOf[Class[T]]
 
   implicit def unwrapStubber[T](stub: ScalaStubbing[T]): OngoingStubbing[T] = stub.ongoingStubbing
@@ -28,7 +28,7 @@ package object moskito {
 /**
  *
  */
-package moskito {
+package mosckito {
 
 import org.mockito.Mockito
 import org.mockito.invocation.InvocationOnMock
@@ -72,7 +72,7 @@ class ScalaStubbing[T](val ongoingStubbing: OngoingStubbing[T]) {
 /**
  *
  */
-trait Moskito {
+trait Mosckito {
 
   import org.mockito.{Matchers => Match, Mockito => Mock}
 
